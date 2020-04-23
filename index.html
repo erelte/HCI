@@ -3,15 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <!-- <link rel="stylesheet" href="assets/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Plugin/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <title>Home</title>
 </head>
     <body>
         <div class="container">
             <div class="header">
                 <div class="nav">
+                    <div class="btn-menu">
+                        <i class="fa fa-bars"></i>
+                    </div>
+
                     <div>
-                        <img src="assets/logo-landscape.png" alt="">
+                        <img src="assets/image/logo-landscape.png" alt="">
                     </div>
                     <ul>
                         <li><a href="">Home</a></li>
@@ -35,11 +42,172 @@
                 </div>
             </div>
             <div class="content">
-                <h1>content</h1>
+                <div class="title">
+                    <p>Recomendation</p>
+                </div>        
+                <div class="owl-carousel owl-theme">
+
+                    <div class="recomCard item">
+                        <div class="image">
+                            <img src="" alt="Image 1">
+                        </div>
+                        <div class="text">
+                            <p>item Name</p>
+                        </div>
+                    </div>
+
+                    <div class="recomCard item">
+                        <div class="image">
+                            <img src="" alt="Image 1">
+                        </div>
+                        <div class="text">
+                            <p>item Name</p>
+                        </div>
+                    </div>
+
+                    <div class="recomCard item">
+                        <div class="image">
+                            <img src="" alt="Image 1">
+                        </div>
+                        <div class="text">
+                            <p>item Name</p>
+                        </div>
+                    </div>
+
+                    <div class="recomCard item">
+                        <div class="image">
+                            <img src="" alt="Image 1">
+                        </div>
+                        <div class="text">
+                            <p>item Name</p>
+                        </div>
+                    </div>
+
+                    <div class="recomCard item">
+                        <div class="image">
+                            <img src="" alt="Image 1">
+                        </div>
+                        <div class="text">
+                            <p>item Name</p>
+                        </div>
+                    </div>
+
+                    <div class="recomCard item">
+                        <div class="image">
+                            <img src="" alt="Image 1">
+                        </div>
+                        <div class="text">
+                            <p>item Name</p>
+                        </div>
+                    </div>
+
+                    <div class="recomCard item">
+                        <div class="image">
+                            <img src="" alt="Image 1">
+                        </div>
+                        <div class="text">
+                            <p>item Name</p>
+                        </div>
+                    </div>
+                    
+                    <div class="recomCard item">
+                        <div class="image">
+                            <img src="" alt="Image 1">
+                        </div>
+                        <div class="text">
+                            <p>item Name</p>
+                        </div>
+                    </div>
+
+                    <div class="recomCard item">
+                        <div class="image">
+                            <img src="" alt="Image 1">
+                        </div>
+                        <div class="text">
+                            <p>item Name</p>
+                        </div>
+                    </div>
+
+                    <div class="recomCard item">
+                        <div class="image">
+                            <img src="" alt="Image 1">
+                        </div>
+                        <div class="text">
+                            <p>item Name</p>
+                        </div>
+                    </div>
+
+                    <div class="recomCard item">
+                        <div class="image">
+                            <img src="" alt="Image 1">
+                        </div>
+                        <div class="text">
+                            <p>item Name</p>
+                        </div>
+                    </div>
+
+                    <div class="recomCard item">
+                        <div class="image">
+                            <img src="" alt="Image 1">
+                        </div>
+                        <div class="text">
+                            <p>item Name</p>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="footer">
                 <h1>footer</h1>
             </div>
         </div>
+
+        <script src="assets/js/jquery-3.4.1.min.js"></script>
+        <script src="Plugin/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+        
+        <script type="text/javascript">
+        
+            $(".nav .btn-menu").click(function(){
+                $(".nav ul").slideToggle();
+                $(".nav ul ul").css('display', 'none');
+            });
+
+            $('.nav ul li').click(function() {
+                $('.nav ul ul').slideUp();
+                $(this).find('ul').slideToggle();
+            });
+            $(window).resize(function(){
+                if($(window).width() > 800){
+                    $(".nav ul").removeAttr('style')
+                }
+            });
+
+            var owl = $('.owl-carousel').owlCarousel({
+                margin: 0,
+                loop: true,
+                nav: false,
+                autoplay:true,
+                autoplayTimeout:1500,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 5
+                    }
+                }
+            });
+
+            owl.on('mousewheel', '.owl-stage', function (e) {
+                if (e.deltaY > 0) {
+                    owl.trigger('next.owl');
+                } else {
+                    owl.trigger('prev.owl');
+                }
+                e.preventDefault();
+            });
+        </script>
     </body>
 </html>

@@ -1,0 +1,174 @@
+html,body{
+    width: 100%;
+    height: 100%;
+    background-color: darkblue;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.header{
+    background-color: aquamarine;
+}
+
+.nav{
+    background-color: white;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    /* height: 10%; */
+}
+
+.nav>.btn-menu{
+    display: none;
+}
+
+.nav div{
+    display: inline-flex;
+    /* margin: 1rem; */
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.nav div img{
+    width: 9rem;
+}
+
+.nav ul{
+    background: white;
+    margin: 0;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    /* display: inline-block; */
+    list-style-type: none;
+    position: relative;
+}
+
+.nav ul li{
+    display: inline-block;
+}
+
+.nav ul li:hover{
+    background: lightgray;
+}
+
+.nav ul li a{
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 1rem;
+}
+
+.nav ul ul{
+    position: absolute;
+    background: lightgray;
+    display: none;
+    padding: 0;
+}
+
+.nav ul ul li{
+    display: block;
+    /* width: 120px; */
+}
+
+.nav ul li:hover ul{
+    display: block;
+}
+
+.nav ul li ul li:hover{
+    background: grey;
+}
+
+.content{
+    background-color: burlywood;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    text-align: center;
+    font-size: 3rem;
+    margin: 0;
+}
+
+.title p{
+    margin: 0;
+}
+
+/* .recomendation .car{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.footer{
+    background-color: chartreuse;
+    height: 10%;
+}
+
+/* recomCard */
+
+.recomCard{
+    margin: 1rem;
+    padding: 1rem;
+    background-color: lightsalmon;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.recomCard .image{
+    background-color: white;
+    height: 10rem;
+    width: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.recomCard .text{
+    background-color: lightseagreen;
+    width: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* responsive */
+
+@media(max-width: 800px){
+    .nav>.btn-menu{
+        display: inline-block;
+    }
+
+    .nav ul{
+        display: none;
+        position: static;
+        background: white;
+    }
+
+    .nav ul li{
+        display: block;
+    }
+
+    .nav ul ul{
+        position: static;
+        background: whitesmoke;
+    }
+}
