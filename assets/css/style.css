@@ -96,6 +96,13 @@ html,body{
     align-items: center;
 }
 
+/* body */
+
+.news{
+    /* width: 100%; */
+    height: 50vh;
+}
+
 .title{
     text-align: center;
     font-size: 3rem;
@@ -148,6 +155,51 @@ html,body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.owl-nav button {
+    background-color: rgba(0, 0, 0, 0.493)!important;
+    /* border-radius: 50%; */
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    text-align: center;
+    line-height: 50px !important;
+    outline: none;
+    transition: all 300ms ease;
+}
+
+.owl-carousel .owl-nav button.owl-prev{
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0 !important;
+    font: inherit;
+    position: relative;
+    line-height: 50px !important;
+    top: -170px;
+    left: -25px;
+}
+
+.owl-carousel .owl-nav button.owl-next{
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0 !important;
+    font: inherit;
+    position: relative;
+    top: -170px;
+    left: 1230px;
+}
+
+.owl-nav button span {
+    font-size: 38px;
+    color: white;
+    display: block;
+}
+
+.owl-nav button:hover {
+    background: rgb(54, 54, 54) !important;
 }
 
 /* responsive */

@@ -42,10 +42,131 @@
                 </div>
             </div>
             <div class="content">
+                <div class="img-sldr owl-theme owl-carousel">
+                    <img class="item news" src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg" alt="img 1">
+                    <img class="item news" src="https://www.bigstockphoto.com/images/homepage/module-6.jpg" alt="img 2">
+                    <img class="item news" src="https://image.shutterstock.com/image-photo/butterfly-grass-on-meadow-night-260nw-1111729556.jpg" alt="img 3">
+                    <img class="item news" src="https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg" alt="img 4">
+                    <img class="item news" src="https://images.unsplash.com/photo-1499084732479-de2c02d45fcc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="img 5">
+                </div>
+
+                <div class="title">
+                    <p>Best Seller</p>
+                </div>        
+                <div class="owl-carousel owl-theme bestSeller">
+                    <div class="recomCard item">
+                        <div class="image">
+                            <img src="" alt="Image 1">
+                        </div>
+                        <div class="text">
+                            <p>item Name</p>
+                        </div>
+                    </div>
+
+                    <div class="recomCard item">
+                        <div class="image">
+                            <img src="" alt="Image 1">
+                        </div>
+                        <div class="text">
+                            <p>item Name</p>
+                        </div>
+                    </div>
+
+                    <div class="recomCard item">
+                        <div class="image">
+                            <img src="" alt="Image 1">
+                        </div>
+                        <div class="text">
+                            <p>item Name</p>
+                        </div>
+                    </div>
+
+                    <div class="recomCard item">
+                        <div class="image">
+                            <img src="" alt="Image 1">
+                        </div>
+                        <div class="text">
+                            <p>item Name</p>
+                        </div>
+                    </div>
+
+                    <div class="recomCard item">
+                        <div class="image">
+                            <img src="" alt="Image 1">
+                        </div>
+                        <div class="text">
+                            <p>item Name</p>
+                        </div>
+                    </div>
+
+                    <div class="recomCard item">
+                        <div class="image">
+                            <img src="" alt="Image 1">
+                        </div>
+                        <div class="text">
+                            <p>item Name</p>
+                        </div>
+                    </div>
+
+                    <div class="recomCard item">
+                        <div class="image">
+                            <img src="" alt="Image 1">
+                        </div>
+                        <div class="text">
+                            <p>item Name</p>
+                        </div>
+                    </div>
+                    
+                    <div class="recomCard item">
+                        <div class="image">
+                            <img src="" alt="Image 1">
+                        </div>
+                        <div class="text">
+                            <p>item Name</p>
+                        </div>
+                    </div>
+
+                    <div class="recomCard item">
+                        <div class="image">
+                            <img src="" alt="Image 1">
+                        </div>
+                        <div class="text">
+                            <p>item Name</p>
+                        </div>
+                    </div>
+
+                    <div class="recomCard item">
+                        <div class="image">
+                            <img src="" alt="Image 1">
+                        </div>
+                        <div class="text">
+                            <p>item Name</p>
+                        </div>
+                    </div>
+
+                    <div class="recomCard item">
+                        <div class="image">
+                            <img src="" alt="Image 1">
+                        </div>
+                        <div class="text">
+                            <p>item Name</p>
+                        </div>
+                    </div>
+
+                    <div class="recomCard item">
+                        <div class="image">
+                            <img src="" alt="Image 1">
+                        </div>
+                        <div class="text">
+                            <p>item Name</p>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="title">
                     <p>Recomendation</p>
                 </div>        
-                <div class="owl-carousel owl-theme">
+                <div class="owl-carousel owl-theme recom">
 
                     <div class="recomCard item">
                         <div class="image">
@@ -181,12 +302,13 @@
                 }
             });
 
-            var owl = $('.owl-carousel').owlCarousel({
+            var owl = $('.bestSeller').owlCarousel({
                 margin: 0,
                 loop: true,
-                nav: false,
+                nav: true,
                 autoplay:true,
-                autoplayTimeout:1500,
+                autoplayTimeout:2000,
+                autoplayHoverPause:true,
                 responsive: {
                     0: {
                         items: 1
@@ -200,14 +322,48 @@
                 }
             });
 
-            owl.on('mousewheel', '.owl-stage', function (e) {
-                if (e.deltaY > 0) {
-                    owl.trigger('next.owl');
-                } else {
-                    owl.trigger('prev.owl');
+            var owl = $('.recom').owlCarousel({
+                margin: 0,
+                loop: true,
+                nav: true,
+                autoplay:true,
+                autoplayTimeout:2000,
+                autoplayHoverPause:true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 5
+                    }
                 }
-                e.preventDefault();
             });
+
+            var imgSldr = $('.img-sldr').owlCarousel({
+                margin: 0,
+                loop: true,
+                nav: true,
+                autoplay:true,
+                autoplayTimeout:2000,
+                autoplayHoverPause:true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                }
+            });
+
+            // owl.on('mousewheel', '.owl-stage', function (e) {
+            //     if (e.deltaY > 0) {
+            //         owl.trigger('next.owl');
+            //     } else {
+            //         owl.trigger('prev.owl');
+            //     }
+            //     e.preventDefault();
+            // });
         </script>
     </body>
 </html>
