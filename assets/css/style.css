@@ -198,10 +198,7 @@ html,body{
     display: block;
 }
 
-.owl-nav button:hover {
-    background: rgb(54, 54, 54) !important;
 }
-
 /* responsive */
 
 @media(max-width: 800px){
