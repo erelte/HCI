@@ -24,7 +24,7 @@ html,body{
     /* justify-content: center; */
     align-items: center;
     /* border-bottom: 1px solid black; */
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     box-shadow: 0px 6px 4px -4px rgb(204, 204, 204);
     /* height: 10%; */
 }
@@ -112,11 +112,15 @@ html,body{
     box-shadow: 0px 0px 18px -5px rgba(204,204,204,1);
     border-radius: 12px;
     margin: 1rem;
+    /* display: flex;
+    flex-direction: column; */
 }
 
 .recom{
     box-shadow: 0px 0px 18px -5px rgba(204,204,204,1);
     border-radius: 12px;
+    /* display: flex;
+    flex-direction: column; */
 }
 
 .title{
@@ -130,6 +134,13 @@ html,body{
 .title p{
     text-align: left;
     margin: 0;
+}
+
+.item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 /* .recomendation .car{
@@ -147,15 +158,16 @@ html,body{
 
 .recomCard{
     margin: 1rem;
-    padding: 1rem;
-    background-color: lightsalmon;
-    border: 1px solid black;
-    border-radius: 5px;
+    /* padding: 1rem; */
+    background-color: white;
+    /* border: 1px solid black; */
+    /* border-radius: 5px; */
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+    /* flex: 25%; */
+    /* max-width: 25%; */
 }
 
 /* .recomCard:first-child{
@@ -170,18 +182,40 @@ html,body{
     background-color: white;
     height: 10rem;
     width: 10rem;
+    border-radius: 5px 5px 0px 0px;
+    box-shadow: 0px 0px 18px -5px rgba(204,204,204,1);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.recomCard .text{
-    background-color: lightseagreen;
+.recomCard .image img{
+    height: 10rem;
     width: 10rem;
+}
+
+.recomCard .text{
+    background-color: white;
+    width: 9rem;
     display: flex;
+    border-radius: 0px 0px 5px 5px;
+    box-shadow: 0px 0px 18px -5px rgba(204,204,204,1);
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: left;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.recomCard .text p{
+    padding: 0;
+    margin: 0;
+}
+
+.recomCard .text p:last-child{
+    color: rgb(252, 164, 0);
+    font-size: 0.8rem;
 }
 
 /* img slider */
@@ -240,7 +274,92 @@ html,body{
     background-color:rgb(75, 75, 75)
 }
 
+/* register */
 
+form{
+    /* width: 50%; */
+    border-radius: 5px;
+    box-shadow: 0px 0px 18px -5px rgba(204,204,204,1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    /* background-color: lemonchiffon; */
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+form p{
+    margin: 0;
+    padding: 0;
+}
+
+form .txtregdetail input{
+    padding: 0.75rem;
+    margin: 0.5rem;
+    margin-left: 0;
+    font-size: 0.8rem;
+    width: 30rem
+}
+
+form button{
+    width: 5rem;
+    height: 2rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+}
+
+/* Category */
+
+.category{
+    /* width: 100%; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; */
+    /* border-radius: 5px; */
+    /* border: 1px solid black; */
+}
+
+.category .title{
+    width: 100%;
+}
+
+.category ul{
+    background: white;
+    margin: 0;
+    /* padding-left: 1rem; */
+    /* padding-top: 0.5rem; */
+    /* padding-bottom: 0.5rem; */
+    /* display: inline-block; */
+    padding: 0;
+    list-style-type: none;
+    width: 100%;
+}
+
+.category ul li{
+    display: inline-block;
+}
+
+
+.category .more{
+    display: none;
+}
+
+.category a:hover{
+    cursor: pointer;
+}
+
+.category .grp_more{
+    /* width: 100%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 /* responsive */
 
 @media(max-width: 800px){
@@ -261,5 +380,10 @@ html,body{
     .nav ul ul{
         position: static;
         background: whitesmoke;
+    }
+
+    .item{
+        flex: 50%;
+        /* max-width: 50%; */
     }
 }

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <!-- <link rel="stylesheet" href="assets/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Promotion</title>
+</head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <div class="nav">
+                    <div class="btn-menu">
+                        <i class="fa fa-bars"></i>
+                    </div>
+
+                    <div>
+                        <img src="assets/image/logo-landscape.png" alt="">
+                    </div>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="./promotion.html">Promotion</a></li>
+                        <li><a href="./shopMakeUp.html">Shop Make Up</a>
+                            <ul>
+                                <li><a href="">Face</a></li>
+                                <li><a href="">Eye</a></li>
+                                <li><a href="">Lip</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="./shopSkinCare.html">Shop Skin Care</a>
+                            <ul>
+                                <li><a href="">Foundation</a></li>
+                                <li><a href="">Concealer</a></li>
+                                <li><a href="">Lipstik</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="./register.html">Register</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content">
+                <div class="promote">
+                    <div class="title">
+                        <p>Brand</p>
+                        <hr>
+                    </div>
+                    <div class="promo">
+                        <img src="" alt="promotion">
+                    </div>
+                </div>
+                <div class="promote">
+                    <div class="title">
+                        <p>Brand</p>
+                        <hr>
+                    </div>
+                    <div class="promo">
+                        <img src="" alt="promotion">
+                    </div>
+                </div>
+                <div class="promote">
+                    <div class="title">
+                        <p>Brand</p>
+                        <hr>
+                    </div>
+                    <div class="promo">
+                        <img src="" alt="promotion">
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <h1>footer</h1>
+            </div>
+        </div>
+
+        <script src="assets/js/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript">       
+            $(".nav .btn-menu").click(function(){
+                $(".nav ul").slideToggle();
+                $(".nav ul ul").css('display', 'none');
+            });
+
+            $('.nav ul li').click(function() {
+                $('.nav ul ul').slideUp();
+                $(this).find('ul').slideToggle();
+            });
+            $(window).resize(function(){
+                if($(window).width() > 800){
+                    $(".nav ul").removeAttr('style')
+                }
+            });
+        </script>
+        <script src="assets/js/imageSlider.js"></script>
+    </body>
+</html>

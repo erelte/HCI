@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <!-- <link rel="stylesheet" href="assets/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Register</title>
+</head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <div class="nav">
+                    <div class="btn-menu">
+                        <i class="fa fa-bars"></i>
+                    </div>
+
+                    <div>
+                        <img src="assets/image/logo-landscape.png" alt="">
+                    </div>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="./promotion.html">Promotion</a></li>
+                        <li><a href="./shopMakeUp.html">Shop Make Up</a>
+                            <ul>
+                                <li><a href="">Face</a></li>
+                                <li><a href="">Eye</a></li>
+                                <li><a href="">Lip</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="./shopSkinCare.html">Shop Skin Care</a>
+                            <ul>
+                                <li><a href="">Foundation</a></li>
+                                <li><a href="">Concealer</a></li>
+                                <li><a href="">Lipstik</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="./register.html">Register</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content">
+                <form>
+                    <p>Register</p>
+
+                    <div class="txtregdetail">
+                        <input type="text" name="txt_name" placeholder="Name">
+                    </div>
+                    <div class="txtregdetail">
+                        <input type="text" name="txt_email" placeholder="Email">
+                    </div>
+                    <div class="txtregdetail">
+                        <input type="password" name="txt_password" placeholder="Password">
+                    </div>
+                    <div class="txtregdetail">
+                        <input type="text" name="txt_address" placeholder="Address">
+                    </div>
+                    <div id="gender">
+                        <div id="text"><p>Gender:</p></div>
+                        <div id="choosegender">
+                            <input type="radio" name="rdo_gender" value="Male"> Male
+                            <input type="radio" name="rdo_gender" value="Female"> Female
+                        </div>
+                    </div>
+                    <div class="checkBox">
+                        <input type="checkbox"> Agree to Beaudei terms and condition
+                    </div>
+
+                    <button value="submit">Register</button>
+
+                </form>
+            </div>
+            <div class="footer">
+                <h1>footer</h1>
+            </div>
+        </div>
+
+        <script src="assets/js/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript">       
+            $(".nav .btn-menu").click(function(){
+                $(".nav ul").slideToggle();
+                $(".nav ul ul").css('display', 'none');
+            });
+
+            $('.nav ul li').click(function() {
+                $('.nav ul ul').slideUp();
+                $(this).find('ul').slideToggle();
+            });
+            $(window).resize(function(){
+                if($(window).width() > 800){
+                    $(".nav ul").removeAttr('style')
+                }
+            });
+        </script>
+        <script src="assets/js/imageSlider.js"></script>
+    </body>
+</html>
