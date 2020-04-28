@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="/assets/css/style.css">
     <!-- <link rel="stylesheet" href="assets/css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Register</title>
+    <title>Shop Make Up</title>
 </head>
     <body>
         <div class="container">
@@ -24,9 +24,9 @@
                         <li><a href="./promotion.html">Promotion</a></li>
                         <li><a href="./shopMakeUp.html">Shop Make Up</a>
                             <ul>
-                                <li><a href="">Face</a></li>
-                                <li><a href="">Eye</a></li>
-                                <li><a href="">Lip</a></li>
+                                <li><a href="./shopMakeUp.html#1">Face</a></li>
+                                <li><a href="./shopMakeUp.html#2">Eye</a></li>
+                                <li><a href="./shopMakeUp.html#3">Lip</a></li>
                             </ul>
                         </li>
                         <li><a href="./shopSkinCare.html">Shop Skin Care</a>
@@ -41,7 +41,7 @@
                 </div>
             </div>
             <div class="content">
-                <div class="category">
+                <div id="1" class="category">
                     <div class="title">
                         <p>Category 1</p>
                     </div>
@@ -286,9 +286,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="category">
+                <div id="2" class="category">
                     <div class="title">
-                        <p>Category 1</p>
+                        <p>Category 2</p>
                     </div>
                     <ul>
                         <li>
@@ -531,9 +531,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="category">
+                <div id="3" class="category">
                     <div class="title">
-                        <p>Category 1</p>
+                        <p>Category 3</p>
                     </div>
                     <ul>
                         <li>
@@ -782,27 +782,13 @@
             </div>
         </div>
 
-        <script src="assets/js/jquery-3.4.1.min.js"></script>
-        <script type="text/javascript">       
-            $(".nav .btn-menu").click(function(){
-                $(".nav ul").slideToggle();
-                $(".nav ul ul").css('display', 'none');
-            });
-
-            $('.nav ul li').click(function() {
-                $('.nav ul ul').slideUp();
-                $(this).find('ul').slideToggle();
-            });
-            $(window).resize(function(){
-                if($(window).width() > 800){
-                    $(".nav ul").removeAttr('style')
-                }
-            });
-
+        <script src="./assets/js/jquery-3.4.1.min.js"></script>
+        <script src="./assets/js/navbar.js"></script>
+        <script type="text/javascript">
             function more(n){
                 $(".category:nth-child("+n+") ul .more").slideToggle()
             }
         </script>
-        <script src="assets/js/imageSlider.js"></script>
+        <script src="./assets/js/imageSlider.js"></script>
     </body>
 </html>

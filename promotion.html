@@ -24,16 +24,16 @@
                         <li><a href="./promotion.html">Promotion</a></li>
                         <li><a href="./shopMakeUp.html">Shop Make Up</a>
                             <ul>
-                                <li><a href="">Face</a></li>
-                                <li><a href="">Eye</a></li>
-                                <li><a href="">Lip</a></li>
+                                <li><a href="./shopMakeUp.html#1">Face</a></li>
+                                <li><a href="./shopMakeUp.html#2">Eye</a></li>
+                                <li><a href="./shopMakeUp.html#3">Lip</a></li>
                             </ul>
                         </li>
                         <li><a href="./shopSkinCare.html">Shop Skin Care</a>
                             <ul>
-                                <li><a href="">Foundation</a></li>
-                                <li><a href="">Concealer</a></li>
-                                <li><a href="">Lipstik</a></li>
+                                <li><a href="./shopSkinCare.html#1">Foundation</a></li>
+                                <li><a href="./shopSkinCare.html#2">Concealer</a></li>
+                                <li><a href="./shopSkinCare.html#3">Lipstik</a></li>
                             </ul>
                         </li>
                         <li><a href="./register.html">Register</a></li>
@@ -74,23 +74,10 @@
             </div>
         </div>
 
-        <script src="assets/js/jquery-3.4.1.min.js"></script>
+        <script src="./assets/js/jquery-3.4.1.min.js"></script>
+        <script src="./assets/js/navbar.js"></script>
         <script type="text/javascript">       
-            $(".nav .btn-menu").click(function(){
-                $(".nav ul").slideToggle();
-                $(".nav ul ul").css('display', 'none');
-            });
-
-            $('.nav ul li').click(function() {
-                $('.nav ul ul').slideUp();
-                $(this).find('ul').slideToggle();
-            });
-            $(window).resize(function(){
-                if($(window).width() > 800){
-                    $(".nav ul").removeAttr('style')
-                }
-            });
         </script>
-        <script src="assets/js/imageSlider.js"></script>
+        <script src="./assets/js/imageSlider.js"></script>
     </body>
 </html>
