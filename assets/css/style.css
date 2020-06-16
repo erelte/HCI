@@ -15,7 +15,11 @@ html,body{
 }
 
 .header{
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
+    position: fixed;
+    top: 2rem;
+    z-index: 10;
+    width: 100%;
 }
 
 .nav{
@@ -92,6 +96,9 @@ html,body{
 }
 
 .content{
+    position: absolute;
+    top: 7rem;
+    width: 100%;
     background-color: white;
     margin: 0;
     padding: 0;
@@ -216,6 +223,33 @@ html,body{
 .recomCard .text p:last-child{
     color: rgb(252, 164, 0);
     font-size: 0.8rem;
+}
+
+/* running text */
+
+.running-text{
+    background-color: black;
+    height: 2rem;
+    padding: 0;
+    margin: 0;
+    color: black;
+    display: flex;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: center; */
+    font-size: 0.8rem;
+    overflow: hidden;
+}
+
+.running-text nobr{
+    display: inline;
+    overflow: hidden;
+    margin-left: -320px;
+    color: white;
 }
 
 /* img slider */

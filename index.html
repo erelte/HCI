@@ -10,6 +10,9 @@
 </head>
     <body>
         <div class="container">
+            <div class="running-text">
+                <nobr>Free Felivery Fee! Without Any Minimum Transaction!</nobr>
+            </div>
             <div class="header">
                 <div class="nav">
                     <div class="btn-menu">
@@ -152,7 +155,17 @@
         <script src="./assets/js/jquery-3.4.1.min.js"></script>
         <script src="./assets/js/navbar.js"></script>
         <script type="text/javascript">
-               
+            var runningText = $('.running-text');
+            var text = $('.running-text nobr');
+            var running = setInterval(function(){
+                text.animate({
+                    'margin-left' : '+=1'
+                },10,function(){
+                    if(parseInt(text.css('margin-left')) == 1450){
+                        text.css('margin-left',-320);
+                    }
+                })
+            },10)
         </script>
         <script src="./assets/js/imageSlider.js"></script>
     </body>
