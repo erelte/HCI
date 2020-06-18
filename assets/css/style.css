@@ -157,11 +157,11 @@ html,body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: left;
     position: relative;
     top: 7rem;
     bottom: 0;
-    background-color: chartreuse;
+    background-color: rgb(219, 219, 219);
     height: 10%;
     width: 100%;
 }
