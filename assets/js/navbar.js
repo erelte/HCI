@@ -8,9 +8,18 @@ $('.nav ul li').click(function() {
     $(this).find('ul').slideToggle();
 });
 
+$('.nav ul li').hover(function () {
+        // over
+        $(this).children('ul').show();
+    }, function () {
+        // out
+        $(this).children('ul').hide();
+    }
+);
+
 $('.nav ul ul a').click(function () {
-    $('.nav ul ul').css('display','none');
-})
+    $('.nav ul li ul').css('display','none');
+});
 
 $(window).resize(function(){
     if($(window).width() > 800){

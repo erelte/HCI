@@ -6,6 +6,7 @@ html,body{
     padding: 0;
     /* font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; */
     font-family: "open sans", tahoma, sans-serif;
+    scroll-padding-top: 7rem;
 }
 
 .container{
@@ -87,16 +88,12 @@ html,body{
     /* width: 120px; */
 }
 
-.nav ul li:hover ul{
-    display: block;
-}
-
 .nav ul li ul li:hover{
     background: grey;
 }
 
 .content{
-    position: absolute;
+    position: relative;
     top: 7rem;
     width: 100%;
     background-color: white;
@@ -157,8 +154,16 @@ html,body{
 } */
 
 .footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 7rem;
+    bottom: 0;
     background-color: chartreuse;
     height: 10%;
+    width: 100%;
 }
 
 /* recomCard */
@@ -276,12 +281,24 @@ html,body{
     list-style-type: none;
     width: 45rem;
     height: 25rem;
-    background-color: lightcoral;
+    background-color: white;
+}
+
+.slider ul li.slide{
+    display: flex;
+    flex-direction: column;
 }
 
 .slider ul li img{
     width: 45rem;
-    height: inherit;
+    height: 24rem;
+}
+
+.slider ul li p{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 1.5rem;
 }
 
 .slider .dots{
@@ -394,6 +411,17 @@ form button{
     align-items: center;
     justify-content: center;
 }
+
+.promote{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.promo img{
+    height: 30rem;
+}
+
 /* responsive */
 
 @media(max-width: 800px){

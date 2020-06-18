@@ -1,6 +1,6 @@
 var slider = $('.slider ul');
 var slide = $('.slide');
-var delay = 2000;
+var delay = 4000;
 
 
 for(let x=0;x<slide.length;x++){
