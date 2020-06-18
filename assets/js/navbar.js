@@ -1,3 +1,7 @@
+function home(){
+    window.location.href = './index.html'
+}
+
 $(".nav .btn-menu").click(function(){
     $(".nav ul").slideToggle();
     $(".nav ul ul").css('display', 'none');

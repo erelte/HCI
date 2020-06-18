@@ -50,6 +50,10 @@ html,body{
     width: 9rem;
 }
 
+.nav div img:hover{
+    cursor: pointer;
+}
+
 .nav ul{
     background: white;
     margin: 0;
@@ -157,11 +161,12 @@ html,body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: left;
+    align-items: center;
+    font-size: 0.5rem;
     position: relative;
     top: 7rem;
     bottom: 0;
-    background-color: rgb(219, 219, 219);
+    background-color:white;
     height: 10%;
     width: 100%;
 }
