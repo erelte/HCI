@@ -58,7 +58,7 @@
                 </div>
             </div>
             <div class="content">
-                <form>
+                <form name="RegForm" onsubmit="return validateForm()" method="post">
                     <p>Register</p>
 
                     <div class="txtregdetail">
@@ -81,7 +81,7 @@
                         </div>
                     </div>
                     <div class="checkBox">
-                        <input type="checkbox"> Agree to Beaudei terms and condition
+                        <input type="checkbox" name="checkAgree"> Agree to Beaudei terms and condition
                     </div>
 
                     <button value="submit">Register</button>
@@ -92,7 +92,37 @@
                 <h1>@2020 Beaudei. All Rights Reserved.</h1>
             </div>
         </div>
-
+        <script>
+            function validateForm() {
+          var name = document.forms["RegForm"]["txt_name"].value;
+          var email = document.forms["RegForm"]["txt_email"].value;
+          var password = document.forms["RegForm"]["txt_password"].value;
+          var address = document.forms["RegForm"]["txt_address"].value;
+          var gender = document.forms["RegForm"]["rdo_gender"].value;
+          var check = document.forms["RegForm"]["checkAgree"].value;
+          if (name == "") {
+            alert("Name must be filled out");
+          }else
+          if (email == "") {
+            alert("Email must be filled out");
+          }else
+          if (password == "") {
+            alert("Password must be filled out");
+          }else
+          if (address == "") {
+            alert("Address must be filled out");
+          }else
+          if (gender == "") {
+            alert("Gender must be filled out");
+          }else
+          if (check ==""){
+            alert("Box Must be Checked!");
+          }else{
+              alert("Register Sukses! \n"+"Nama: "+name +"\nEmail: "+email + "\nAddress: "+address+"\nGender: "+gender);
+              return true;
+          }
+        }
+        </script>
         <script src="./assets/js/jquery-3.4.1.min.js"></script>
         <script src="./assets/js/navbar.js"></script>
         <script type="text/javascript">       
